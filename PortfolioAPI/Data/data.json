@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "full_name": "Yevhen Svitlichnyi",
+    "birth_date": "2002-01-12",
+    "position": "Full-Stack Developer",
+    "email": "evgen.svetlichnyi@gmail.com",
+    "social_links": {
+      "linkedin": "https://www.linkedin.com/in/yevhen-svitlychnyi-447230199/",
+      "github": "https://github.com/Svetlichny-Evgen",
+      "gitlab": "https://gitlab.com/evgen.svetlichnyi"
+    },
+    "photo_path": "/imges/UsersPhoto/",
+    "skills": {
+      "programming_languages": ["С#", "JavaScript", "TypeScript", "Python", "Java", "C++", "Kotlin", "SQL"],
+      "technologies": ["REST", "Ajax", "MVC"],
+      "frameworks/libraries": ["Entity Framework", ".NET", "Windows Forms", "NodeJS", "ExpressJS", "NextJS"],
+      "databases": ["MySQL", "SQLite", "PostgreSQL", "SQL Server", "MongoDB"],
+      "frontend": ["HTML", "CSS", "Blazor Server", "Razor Pages", "Angular", "React"],
+      "developer_enviroments": ["Visual Studio", "VS Code", "DBeaver"],
+      "other": [
+        "Git",
+        "GitHub",
+        "OOP",
+        "SOLID",
+        "JSON",
+        "XML",
+        "Docker",
+        "DBeaver",
+        "Postman"
+      ]
+    },
+    "projects": [
+      {
+        "name": "Management system for a landscape design agency",
+        "category": "Desktop application development",
+        "description": "Design a relational database and develop a Windows Forms application to manage landscape design projects and customer information for a landscape design agency."
+      },
+      {
+        "name": "Car sales management system",
+        "category": "Desktop application development",
+        "description": "Developed a Windows Forms application to manage car sales data, with a MySQL database to store and organize inventory information."
+      },
+      {
+        "name": "Audio player for Windows",
+        "category": "Desktop application development",
+        "description": " Created a Windows Forms application to play audio files from a selected folder on the user's computer.",
+        "link": "https://github.com/Svetlichny-Evgen/ecommerce-platform"
+      },
+      {
+        "name": "Web application for accelerated aging assessment",
+        "category": "Web application development",
+        "description": "Developed a Blazor web application for accelerated aging assessment of users, with registration and data management functions, supported by an MS SQL database",
+        "link": "https://github.com/Svetlichny-Evgen/AssessmentOfAcceleratedAgingOfTheHumanBody"
+      },
+      {
+        "name": "Online furniture store",
+        "category": "Web development",
+        "description": "Created an online furniture store using Python and Django framework, with a database developed using SQLite."
+      },
+      {
+        "name": "Mobile application for hospital patient management",
+        "category": "Mobile application development",
+        "description": " Created a Java-based mobile application for managing patient data in a hospital, with secure multi-level access and SQLite as the database management system.",
+        "link": "https://github.com/Svetlichny-Evgen/MedTreck"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "full_name": "Ihor Tkachenko",
+    "birth_date": "2002-07-30",
+    "position": "Backend Developer",
+    "email": "ihor.tkachenko30@gmail.com",
+    "social_links": {
+      "linkedin": "https://www.linkedin.com/in/ihor-tkachenko-7aa18b213/",
+      "github": "https://github.com/igortk",
+      "gitlab": "https://gitlab.com/igortk76"
+    },
+    "photo_path": "/imges/UsersPhoto/",
+    "skills": {
+      "programming_languages": ["Java", "Golang", "Python", "SQL", "C#"],
+      "frameworks/libraries": ["Maven", "Spring (Boot, Data JPA, Retry)", "Hibernate", "JDBC", ".NET"],
+      "message_broker": ["RabbitMQ", "NATS"],
+      "databases": ["MySQL", "PostgreSQL", "Redis", "ElasticSearch", "SqlServer", "MongoDb"],
+      "developer_enviroments": ["IntelliJ IDEA", "PyCharm", "Goland", " Visual Studio"],
+      "other": [
+        "Git",
+        "Gitlab",
+        "GitHub",
+        "Docker",
+        "DBeaver",
+        "GitlabApi",
+        "Postman",
+        "Truffle",
+        "HD wallet",
+        "REST",
+        "Http/Https",
+        "Grpc api",
+        "Flask",
+        "Unit test"
+      ]
+    },
+    "projects": [
+      {
+        "name": "Microservices Architecture",
+        "description": "Distributed ticket booking system",
+        "technologies": ["Spring Cloud", "Kafka", "Kubernetes"],
+        "year": 2023,
+        "link": "https://github.com/igortk/booking-system"
+      },
+      {
+        "name": "REST API for Bank",
+        "description": "Secure transaction processing system",
+        "technologies": ["Java", "Spring Security", "OAuth2"],
+        "year": 2022,
+        "link": "https://gitlab.com/igortk76/bank-api"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "full_name": "Dmitro Borisov",
+    "birth_date": "2002-10-16",
+    "position": "DevOps",
+    "email": "dimab7360@gmail.com",
+    "social_links": {
+      "linkedin": "https://www.linkedin.com/in/dmytriy-borysov-170471230/",
+      "github": "https://github.com/dimab7360",
+      "gitlab": "https://gitlab.com/dimab7360"
+    },
+    "photo_path": "/imges/UsersPhoto/",
+    "skills": {
+      "programming_languages": ["Python", "Bash", "C++"],
+      "operating_systems_and_virtualization": [
+        "Windows Server",
+        "Linux",
+        "ESXi VMWare",
+        "Proxmox",
+        " Hyper-V",
+        "VirtualBox"
+      ],
+      "networking_technologies_and_hardware": [
+        "Networking knowledge",
+        "Mikrotik",
+        "HP",
+        "Unifi",
+        "Edimax",
+        "Ufw",
+        "Firewalld",
+        "Iptables"
+      ],
+      "containerization_and_orchestration": ["Docker", "Docker Compose"],
+      "monitoring_systems": ["Prometheus", "Grafana", "Cacti"],
+      "version_control_systems": ["GitHub", "GitLab"],
+      "web_servers": ["Apache", "Nginx"],
+      "frameworks/libraries": ["Flask", "Django"],
+      "databases": ["MySQL", "PostgreSQL", "MariaDB", "MongoDB", "SQLite"]
+    },
+    "projects": [
+      {
+        "name": "Kubernetes Cluster Automation",
+        "description": "Auto-scaling production cluster with zero-downtime deployments",
+        "technologies": ["EKS", "Terraform", "ArgoCD"],
+        "year": 2023,
+        "link": "https://github.com/dimab7360/k8s-automation"
+      },
+      {
+        "name": "CI/CD Pipeline for FinTech",
+        "description": "Secure deployment pipeline with automated compliance checks",
+        "technologies": ["GitLab CI", "OPA", "SonarQube"],
+        "year": 2022,
+        "link": "https://gitlab.com/dimab7360/fintech-pipeline"
+      }
+    ]
+  }
+]

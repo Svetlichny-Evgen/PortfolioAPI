@@ -1,17 +1,14 @@
-﻿namespace PortfolioAPI.Models
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace TeamPortfolio.Models
 {
     public class Project
     {
-        public Guid Id { get; set; }
-        public string Type { get; set; } = null!;
-        public string Title { get; set; } = null!;
-        public string Description { get; set; } = null!;
-        public string? Link { get; set; }
-        public string? GitLink { get; set; }
-
-        public Guid UserId { get; set; }
-        public User User { get; set; } = null!;
-
-        public ICollection<ProjectTech> Techs { get; set; } = new List<ProjectTech>();
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public string Description { get; set; }
+        public string Link { get; set; }
+        public List<string> Technologies { get; set; }
     }
 }
