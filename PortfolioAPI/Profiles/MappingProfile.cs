@@ -1,20 +1,32 @@
 ﻿using AutoMapper;
-using PortfolioAPI.Models;
-using PortfolioAPI.DTOs;
+using TeamPortfolio.Models;
+using TeamPortfolio.DTOs;
 
-namespace PortfolioAPI.Profiles
+namespace TeamPortfolio.Profiles
 {
     public class MappingProfile : Profile
     {
-        public MappingProfile() {
-        CreateMap<User, UserDto>();
-        CreateMap<Skill, SkillDto>()
-            .ForMember(dest => dest.CategoryTitle, opt => opt.MapFrom(src => src.Category.Title));
+        public MappingProfile()
+        {
+            // Основной маппинг для TeamMember
+            CreateMap<TeamMember, TeamMemberDTO>()
+                .ForMember(dest => dest.SocialLinks, opt => opt.MapFrom(src => src.SocialLinks))
+                .ForMember(dest => dest.Skills, opt => opt.MapFrom(src => src.Skills))
+                .ForMember(dest => dest.Projects, opt => opt.MapFrom(src => src.Projects));
 
-        CreateMap<Project, ProjectDto>()
-            .ForMember(dest => dest.TechTitles, opt => opt.MapFrom(src =>
-                src.Techs.Select(t => t.Tech.Title))); 
+            CreateMap<TeamMemberCreateDTO, TeamMember>();
+            CreateMap<TeamMemberUpdateDTO, TeamMember>();
+
+            // Маппинг для вложенных объектов
+            CreateMap<Project, ProjectDTO>();
+            CreateMap<SocialLinks, SocialLinksDTO>();
+            CreateMap<Skills, SkillsDTO>();
+
+            // Обратные маппинги (если нужны)
+            CreateMap<TeamMemberDTO, TeamMember>();
+            CreateMap<ProjectDTO, Project>();
+            CreateMap<SocialLinksDTO, SocialLinks>();
+            CreateMap<SkillsDTO, Skills>();
         }
-        
     }
 }
