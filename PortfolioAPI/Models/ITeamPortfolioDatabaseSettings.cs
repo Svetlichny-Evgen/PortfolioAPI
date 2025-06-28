@@ -1,4 +1,6 @@
-﻿namespace TeamPortfolio.Models
+﻿using Microsoft.Extensions.Options;
+
+namespace TeamPortfolio.Models
 {
     public interface ITeamPortfolioDatabaseSettings
     {

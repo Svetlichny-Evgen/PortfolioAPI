@@ -106,14 +106,12 @@
         "name": "Microservices Architecture",
         "description": "Distributed ticket booking system",
         "technologies": ["Spring Cloud", "Kafka", "Kubernetes"],
-        "year": 2023,
         "link": "https://github.com/igortk/booking-system"
       },
       {
         "name": "REST API for Bank",
         "description": "Secure transaction processing system",
         "technologies": ["Java", "Spring Security", "OAuth2"],
-        "year": 2022,
         "link": "https://gitlab.com/igortk76/bank-api"
       }
     ]
@@ -162,14 +160,12 @@
         "name": "Kubernetes Cluster Automation",
         "description": "Auto-scaling production cluster with zero-downtime deployments",
         "technologies": ["EKS", "Terraform", "ArgoCD"],
-        "year": 2023,
         "link": "https://github.com/dimab7360/k8s-automation"
       },
       {
         "name": "CI/CD Pipeline for FinTech",
         "description": "Secure deployment pipeline with automated compliance checks",
         "technologies": ["GitLab CI", "OPA", "SonarQube"],
-        "year": 2022,
         "link": "https://gitlab.com/dimab7360/fintech-pipeline"
       }
     ]

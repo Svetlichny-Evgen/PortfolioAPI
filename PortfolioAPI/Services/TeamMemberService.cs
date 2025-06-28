@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using MongoDB.Driver;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using MongoDB.Driver;
 using TeamPortfolio.Models;
 
 namespace TeamPortfolio.Services
@@ -9,10 +9,11 @@ namespace TeamPortfolio.Services
     {
         private readonly IMongoCollection<TeamMember> _teamMembers;
 
-        public TeamMemberService(ITeamPortfolioDatabaseSettings settings)
+        public TeamMemberService(
+            ITeamPortfolioDatabaseSettings settings,
+            IMongoClient mongoClient)
         {
-            var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.DatabaseName);
+            var database = mongoClient.GetDatabase(settings.DatabaseName);
             _teamMembers = database.GetCollection<TeamMember>(settings.TeamMembersCollectionName);
         }
 
