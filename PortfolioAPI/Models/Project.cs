@@ -5,10 +5,13 @@ namespace TeamPortfolio.Models
 {
     public class Project
     {
-        public string Name { get; set; }
-        public string Category { get; set; }
+        [BsonElement("title")]
+        public string Title { get; set; }
+        [BsonElement("type")]
+        public string Type { get; set; }
+        [BsonElement("description")]
         public string Description { get; set; }
-        public string Link { get; set; }
-        public List<string> Technologies { get; set; }
+        [BsonElement("links")]
+        public string[] Links { get; set; }
     }
 }

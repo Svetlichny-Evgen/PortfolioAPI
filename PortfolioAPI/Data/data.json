@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "full_name": "Yevhen Svitlichnyi",
     "birth_date": "2002-01-12",
     "position": "Full-Stack Developer",
@@ -10,64 +9,53 @@
       "github": "https://github.com/Svetlichny-Evgen",
       "gitlab": "https://gitlab.com/evgen.svetlichnyi"
     },
-    "photo_path": "/imges/UsersPhoto/",
+    "photo_path": "/images/UsersPhoto/",
     "skills": {
-      "programming_languages": ["С#", "JavaScript", "TypeScript", "Python", "Java", "C++", "Kotlin", "SQL"],
-      "technologies": ["REST", "Ajax", "MVC"],
-      "frameworks/libraries": ["Entity Framework", ".NET", "Windows Forms", "NodeJS", "ExpressJS", "NextJS"],
-      "databases": ["MySQL", "SQLite", "PostgreSQL", "SQL Server", "MongoDB"],
-      "frontend": ["HTML", "CSS", "Blazor Server", "Razor Pages", "Angular", "React"],
-      "developer_enviroments": ["Visual Studio", "VS Code", "DBeaver"],
-      "other": [
-        "Git",
-        "GitHub",
-        "OOP",
-        "SOLID",
-        "JSON",
-        "XML",
-        "Docker",
-        "DBeaver",
-        "Postman"
-      ]
+      "programming_languages": [ "С#", "JavaScript", "TypeScript", "Python", "Java", "C++", "Kotlin", "SQL" ],
+      "technologies": [ "REST", "Ajax", "MVC" ],
+      "frameworks_and_libraries": [ "Entity Framework", ".NET", "Windows Forms", "NodeJS", "ExpressJS", "NextJS" ],
+      "databases": [ "MySQL", "SQLite", "PostgreSQL", "SQL Server", "MongoDB" ],
+      "frontend": [ "HTML", "CSS", "Blazor Server", "Razor Pages", "Angular", "React" ],
+      "developer_environments": [ "Visual Studio", "VS Code", "PyCharm", "DBeaver" ],
+      "other": [ "Git", "GitHub", "OOP", "SOLID", "JSON", "XML", "Docker", "Postman", "Swagger" ]
     },
     "projects": [
       {
-        "name": "Management system for a landscape design agency",
-        "category": "Desktop application development",
+        "title": "Management system for a landscape design agency",
+        "type": "Desktop application development",
         "description": "Design a relational database and develop a Windows Forms application to manage landscape design projects and customer information for a landscape design agency."
       },
       {
-        "name": "Car sales management system",
-        "category": "Desktop application development",
+        "title": "Car sales management system",
+        "type": "Desktop application development",
         "description": "Developed a Windows Forms application to manage car sales data, with a MySQL database to store and organize inventory information."
       },
       {
-        "name": "Audio player for Windows",
-        "category": "Desktop application development",
-        "description": " Created a Windows Forms application to play audio files from a selected folder on the user's computer.",
-        "link": "https://github.com/Svetlichny-Evgen/ecommerce-platform"
+        "title": "Audio player for Windows",
+        "type": "Desktop application development",
+        "description": "Created a Windows Forms application to play audio files from a selected folder on the user's computer.",
+        "links": [ "https://github.com/Svetlichny-Evgen/ecommerce-platform" ]
       },
       {
-        "name": "Web application for accelerated aging assessment",
-        "category": "Web application development",
+        "title": "Web application for accelerated aging assessment",
+        "type": "Web application development",
         "description": "Developed a Blazor web application for accelerated aging assessment of users, with registration and data management functions, supported by an MS SQL database",
-        "link": "https://github.com/Svetlichny-Evgen/AssessmentOfAcceleratedAgingOfTheHumanBody"
+        "links": [ "https://github.com/Svetlichny-Evgen/AssessmentOfAcceleratedAgingOfTheHumanBody" ]
       },
       {
-        "name": "Online furniture store",
-        "category": "Web development",
+        "title": "Online furniture store",
+        "type": "Web development",
         "description": "Created an online furniture store using Python and Django framework, with a database developed using SQLite."
       },
       {
-        "name": "Mobile application for hospital patient management",
-        "category": "Mobile application development",
-        "description": " Created a Java-based mobile application for managing patient data in a hospital, with secure multi-level access and SQLite as the database management system.",
-        "link": "https://github.com/Svetlichny-Evgen/MedTreck"
+        "title": "Mobile application for hospital patient management",
+        "type": "Mobile application development",
+        "description": "Created a Java-based mobile application for managing patient data in a hospital, with secure multi-level access and SQLite as the database management system.",
+        "links": [ "https://github.com/Svetlichny-Evgen/MedTreck" ]
       }
     ]
   },
   {
-    "id": 2,
     "full_name": "Ihor Tkachenko",
     "birth_date": "2002-07-30",
     "position": "Backend Developer",
@@ -77,13 +65,13 @@
       "github": "https://github.com/igortk",
       "gitlab": "https://gitlab.com/igortk76"
     },
-    "photo_path": "/imges/UsersPhoto/",
+    "photo_path": "/images/UsersPhoto/",
     "skills": {
-      "programming_languages": ["Java", "Golang", "Python", "SQL", "C#"],
-      "frameworks/libraries": ["Maven", "Spring (Boot, Data JPA, Retry)", "Hibernate", "JDBC", ".NET"],
-      "message_broker": ["RabbitMQ", "NATS"],
-      "databases": ["MySQL", "PostgreSQL", "Redis", "ElasticSearch", "SqlServer", "MongoDb"],
-      "developer_enviroments": ["IntelliJ IDEA", "PyCharm", "Goland", " Visual Studio"],
+      "programming_languages": [ "Java", "Golang", "Python", "SQL", "C#" ],
+      "frameworks_and_libraries": [ "Maven", "Spring (Boot, Data JPA, Retry)", "Hibernate", "JDBC", ".NET" ],
+      "message_broker": [ "RabbitMQ", "NATS" ],
+      "databases": [ "MySQL", "PostgreSQL", "Redis", "ElasticSearch", "SqlServer", "MongoDb" ],
+      "developer_environments": [ "IntelliJ IDEA", "PyCharm", "Goland", "Visual Studio" ],
       "other": [
         "Git",
         "Gitlab",
@@ -103,21 +91,19 @@
     },
     "projects": [
       {
-        "name": "Microservices Architecture",
-        "description": "Distributed ticket booking system",
-        "technologies": ["Spring Cloud", "Kafka", "Kubernetes"],
-        "link": "https://github.com/igortk/booking-system"
-      },
-      {
-        "name": "REST API for Bank",
-        "description": "Secure transaction processing system",
-        "technologies": ["Java", "Spring Security", "OAuth2"],
-        "link": "https://gitlab.com/igortk76/bank-api"
+        "title": "Stock exchange system",
+        "type": "Microservices",
+        "description": " A small stock exchange system was developed with a microservices architecture, consisting of  four components. The first component is the REST API of the system; the second is responsible for managing user balances; the third handles the calculation and storage of quotes; the fourth is responsible for managing (creating, deleting, editing) user orders. The components communicate using a message broker (RabbitMQ). Information is stored in a relational database (PostgreSQL) and partially cached in Redis.",
+        "links": [
+          "https://github.com/igortk/order-api",
+          "https://github.com/igortk/balance-service",
+          "https://github.com/igortk/order-processing-service",
+          "https://github.com/igortk/quote-manager"
+        ]
       }
     ]
   },
   {
-    "id": 3,
     "full_name": "Dmitro Borisov",
     "birth_date": "2002-10-16",
     "position": "DevOps",
@@ -127,15 +113,15 @@
       "github": "https://github.com/dimab7360",
       "gitlab": "https://gitlab.com/dimab7360"
     },
-    "photo_path": "/imges/UsersPhoto/",
+    "photo_path": "/images/UsersPhoto/",
     "skills": {
-      "programming_languages": ["Python", "Bash", "C++"],
+      "programming_languages": [ "Python", "Bash", "C++" ],
       "operating_systems_and_virtualization": [
         "Windows Server",
         "Linux",
         "ESXi VMWare",
         "Proxmox",
-        " Hyper-V",
+        "Hyper-V",
         "VirtualBox"
       ],
       "networking_technologies_and_hardware": [
@@ -148,25 +134,38 @@
         "Firewalld",
         "Iptables"
       ],
-      "containerization_and_orchestration": ["Docker", "Docker Compose"],
-      "monitoring_systems": ["Prometheus", "Grafana", "Cacti"],
-      "version_control_systems": ["GitHub", "GitLab"],
-      "web_servers": ["Apache", "Nginx"],
-      "frameworks/libraries": ["Flask", "Django"],
-      "databases": ["MySQL", "PostgreSQL", "MariaDB", "MongoDB", "SQLite"]
+      "containerization_and_orchestration": [ "Docker", "Docker Compose" ],
+      "monitoring_systems": [ "Prometheus", "Grafana", "Cacti" ],
+      "version_control_systems": [ "GitHub", "GitLab" ],
+      "web_servers": [ "Apache", "Nginx" ],
+      "frameworks_and_libraries": [ "Flask", "Django" ],
+      "databases": [ "MySQL", "PostgreSQL", "MariaDB", "MongoDB", "SQLite" ]
     },
     "projects": [
       {
-        "name": "Kubernetes Cluster Automation",
-        "description": "Auto-scaling production cluster with zero-downtime deployments",
-        "technologies": ["EKS", "Terraform", "ArgoCD"],
-        "link": "https://github.com/dimab7360/k8s-automation"
+        "title": "Deployment of Electronic Queue API",
+        "type": "DevOps",
+        "description": "Full deployment cycle of an API service to a Kubernetes cluster (test/prod) with PostgreSQL. Utilizes Docker, DockerHub, Kaniko, Helm manifests, and GitLab pipeline."
       },
       {
-        "name": "CI/CD Pipeline for FinTech",
-        "description": "Secure deployment pipeline with automated compliance checks",
-        "technologies": ["GitLab CI", "OPA", "SonarQube"],
-        "link": "https://gitlab.com/dimab7360/fintech-pipeline"
+        "title": "Deployment of NextJS Website with MongoDB Atlas",
+        "type": "DevOps",
+        "description": "Deployment of a website built with Next.js connected to a cloud MongoDB Atlas database. Uses Docker, DockerHub, Kaniko, Helm manifests, GitLab pipeline, and Kubernetes."
+      },
+      {
+        "title": "Deployment of CACTI Monitoring System",
+        "type": "Monitoring/Infrastructure",
+        "description": "Configuration of CACTI monitoring system with integration for Linux and Windows servers, as well as MikroTik routers."
+      },
+      {
+        "title": "Deployment of Prometheus + Grafana Monitoring System",
+        "type": "Monitoring/Infrastructure",
+        "description": "Installation and configuration of a monitoring system based on Prometheus with Grafana dashboards. Includes integration with Linux/Windows servers and PostgreSQL, Oracle, and SQLite databases."
+      },
+      {
+        "title": "Django Menu Website with SQLite Deployment",
+        "type": "Web Development",
+        "description": "Development of a menu website using Django and SQLite. Packaged into a Docker container and deployed."
       }
     ]
   }

@@ -20,8 +20,8 @@ namespace TeamPortfolio.Services
         public async Task<List<TeamMember>> GetAsync() =>
             await _teamMembers.Find(member => true).ToListAsync();
 
-        public async Task<TeamMember> GetAsync(int id) =>
-            await _teamMembers.Find<TeamMember>(member => member.MemberId == id).FirstOrDefaultAsync();
+        public async Task<TeamMember> GetAsync(string id) =>
+            await _teamMembers.Find<TeamMember>(member => member.Id == id).FirstOrDefaultAsync();
 
         public async Task<TeamMember> CreateAsync(TeamMember teamMember)
         {
@@ -29,10 +29,10 @@ namespace TeamPortfolio.Services
             return teamMember;
         }
 
-        public async Task UpdateAsync(int id, TeamMember teamMemberIn) =>
-            await _teamMembers.ReplaceOneAsync(member => member.MemberId == id, teamMemberIn);
+        public async Task UpdateAsync(string id, TeamMember teamMemberIn) =>
+            await _teamMembers.ReplaceOneAsync(member => member.Id == id, teamMemberIn);
 
-        public async Task RemoveAsync(int id) =>
-            await _teamMembers.DeleteOneAsync(member => member.MemberId == id);
+        public async Task RemoveAsync(string id) =>
+            await _teamMembers.DeleteOneAsync(member => member.Id == id);
     }
 }

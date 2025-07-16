@@ -22,7 +22,7 @@ namespace TeamPortfolio.Controllers
         }
 
         [HttpPost("team-member/{id}/projects")]
-        public async Task<IActionResult> AddProject(int id, [FromBody] Project project)
+        public async Task<IActionResult> AddProject(string id, [FromBody] Project project)
         {
             var teamMember = await _teamMemberService.GetAsync(id);
             if (teamMember == null)
@@ -35,21 +35,20 @@ namespace TeamPortfolio.Controllers
         }
 
         [HttpPut("team-member/{memberId}/projects/{projectId}")]
-        public async Task<IActionResult> UpdateProject(int memberId, string projectId, [FromBody] Project project)
+        public async Task<IActionResult> UpdateProject(string memberId, string projectId, [FromBody] Project project)
         {
             var teamMember = await _teamMemberService.GetAsync(memberId);
             if (teamMember == null)
                 return NotFound();
 
-            var existingProject = teamMember.Projects.Find(p => p.Name == projectId);
+            var existingProject = teamMember.Projects.Find(p => p.Title== projectId);
             if (existingProject == null)
                 return NotFound();
 
             // Обновление проекта
-            existingProject.Name = project.Name;
+            existingProject.Title = project.Title;
             existingProject.Description = project.Description;
-            existingProject.Link = project.Link;
-            existingProject.Technologies = project.Technologies;
+            existingProject.Links = project.Links;
 
             await _teamMemberService.UpdateAsync(memberId, teamMember);
 
@@ -57,7 +56,7 @@ namespace TeamPortfolio.Controllers
         }
 
         [HttpPost("team-member/{id}/skills")]
-        public async Task<IActionResult> AddSkill(int id, [FromBody] SkillUpdateDTO skillUpdate)
+        public async Task<IActionResult> AddSkill(string id, [FromBody] SkillUpdateDTO skillUpdate)
         {
             var teamMember = await _teamMemberService.GetAsync(id);
             if (teamMember == null)

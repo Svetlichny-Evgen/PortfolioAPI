@@ -26,7 +26,7 @@ namespace TeamPortfolio.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<TeamMember>> Get(int id)
+        public async Task<ActionResult<TeamMember>> Get(string id)
         {
             var teamMember = await _teamMemberService.GetAsync(id);
 
@@ -43,7 +43,6 @@ namespace TeamPortfolio.Controllers
         {
             var teamMember = new TeamMember
             {
-                MemberId = teamMemberCreateDTO.MemberId,
                 FullName = teamMemberCreateDTO.FullName,
                 BirthDate = teamMemberCreateDTO.BirthDate,
                 Position = teamMemberCreateDTO.Position,
@@ -56,11 +55,11 @@ namespace TeamPortfolio.Controllers
 
             await _teamMemberService.CreateAsync(teamMember);
 
-            return CreatedAtAction(nameof(Get), new { id = teamMember.MemberId }, teamMember);
+            return CreatedAtAction(nameof(Get), new { id = teamMember.Id }, teamMember);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, TeamMemberUpdateDTO teamMemberUpdateDTO)
+        public async Task<IActionResult> Update(string id, TeamMemberUpdateDTO teamMemberUpdateDTO)
         {
             var existingTeamMember = await _teamMemberService.GetAsync(id);
 
@@ -84,7 +83,7 @@ namespace TeamPortfolio.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(string id)
         {
             var teamMember = await _teamMemberService.GetAsync(id);
 

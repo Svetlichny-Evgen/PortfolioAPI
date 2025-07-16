@@ -7,9 +7,9 @@ namespace TeamPortfolio.Services
     public interface ITeamMemberService
     {
         Task<List<TeamMember>> GetAsync();
-        Task<TeamMember> GetAsync(int id);
+        Task<TeamMember> GetAsync(string memberId);
         Task<TeamMember> CreateAsync(TeamMember teamMember);
-        Task UpdateAsync(int id, TeamMember teamMember);
-        Task RemoveAsync(int id);
+        Task UpdateAsync(string memberId, TeamMember teamMember);
+        Task RemoveAsync(string memberId);
     }
 }

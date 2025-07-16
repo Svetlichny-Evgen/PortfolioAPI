@@ -9,9 +9,6 @@ namespace TeamPortfolio.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        [BsonElement("id")]
-        public int MemberId { get; set; }
-
         [BsonElement("full_name")]
         public string FullName { get; set; }
 

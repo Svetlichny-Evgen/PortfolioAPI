@@ -1,6 +1,7 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+п»їusing Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Text;
 using TeamPortfolio.Models;
@@ -8,34 +9,38 @@ using TeamPortfolio.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Конфигурация MongoDB
+// РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ MongoDB
 builder.Services.Configure<TeamPortfolioDatabaseSettings>(
     builder.Configuration.GetSection("TeamPortfolioDatabase"));
 
 builder.Services.AddSingleton<ITeamPortfolioDatabaseSettings>(sp =>
     sp.GetRequiredService<IOptions<TeamPortfolioDatabaseSettings>>().Value);
 
-// Проверка подключения к MongoDB
+// РџСЂРѕРІРµСЂРєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рє MongoDB
 try
 {
-    var settings = builder.Configuration.GetSection("TeamPortfolioDatabase");
-    var client = new MongoClient(settings["ConnectionString"]);
-    var databases = await client.ListDatabaseNamesAsync();
-    Console.WriteLine("Successfully connected to MongoDB!");
+    var mongoSettings = builder.Configuration.GetSection("TeamPortfolioDatabase");
+    var mongoClient = new MongoClient(mongoSettings["ConnectionString"]);
+    var pingDb = mongoClient.GetDatabase("admin");
+    var command = new BsonDocument("ping", 1);
+    await pingDb.RunCommandAsync<BsonDocument>(command);
+
+    Console.WriteLine("вњ… Successfully connected to MongoDB!");
 }
 catch (Exception ex)
 {
-    Console.WriteLine($"MongoDB connection failed: {ex.Message}");
-    throw;
+    Console.WriteLine($"вќЊ MongoDB connection failed: {ex}");
+    Environment.Exit(1); // РќРµ Р·Р°РїСѓСЃРєР°РµРј API, РµСЃР»Рё Р‘Р” РЅРµ РґРѕСЃС‚СѓРїРЅР°
 }
 
-// Регистрация сервисов
+
+// Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃРµСЂРІРёСЃРѕРІ
 builder.Services.AddSingleton<IMongoClient>(sp =>
     new MongoClient(sp.GetRequiredService<ITeamPortfolioDatabaseSettings>().ConnectionString));
 builder.Services.AddSingleton<ITeamMemberService, TeamMemberService>();
 builder.Services.AddSingleton<IAdminService, AdminService>();
 
-// Настройка JWT
+// РќР°СЃС‚СЂРѕР№РєР° JWT
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
